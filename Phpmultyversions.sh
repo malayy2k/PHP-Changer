@@ -23,32 +23,32 @@ echo '
 **********************************************************
 '
 apt-get update
-apt-get --yes --allow instead install libxml2-dev 
-apt-get --yes --allow instead install libssl-dev 
-apt-get --yes --allow instead install libcurl4-openssl-dev 
-apt-get --yes --allow instead install pkg-config 
-apt-get --yes --allow instead install libcurl4-gnutls-dev
-apt-get --yes --allow instead install libpcre3-dev
-apt-get --yes --allow instead install libfreetype6-dev
-apt-get --yes --allow instead install libgd2-xpm-dev
-apt-get --yes --allow instead install libmysqlclient-dev
-apt-get --yes --allow instead install libsasl2-dev
-apt-get --yes --allow instead install libmhash-dev
-apt-get --yes --allow instead install unixodbc-dev
-apt-get --yes --allow instead install freetds-dev
-apt-get --yes --allow instead install libpspell-dev
-apt-get --yes --allow instead install libsnmp-dev
-apt-get --yes --allow instead install libmcrypt-dev
-apt-get --yes --allow instead install libxpm-dev 
-apt-get --yes --allow instead install libjpeg-dev 
-apt-get --yes --allow instead install libdb4.8-dev
-apt-get --yes --allow instead install libbz2-dev
-apt-get --yes --allow instead install libpng12-dev 
-apt-get --yes --allow instead install libmysqlclient-dev 
-apt-get --yes --allow insteas install libapache2-mod-fastcgi 
-apt-get --yes --allow instead install apache2-mpm-worker
-apt-get --yes --allow instead install libcurl4-openssl-dev
-apt-get --yes --allow instead install git 
+apt-get --yes --force-yes install libxml2-dev 
+apt-get --yes --force-yes install libssl-dev 
+apt-get --yes --force-yes install libcurl4-openssl-dev 
+apt-get --yes --force-yes install pkg-config 
+apt-get --yes --force-yes install libcurl4-gnutls-dev
+apt-get --yes --force-yes install libpcre3-dev
+apt-get --yes --force-yes install libfreetype6-dev
+apt-get --yes --force-yes install libgd2-xpm-dev
+apt-get --yes --force-yes install libmysqlclient-dev
+apt-get --yes --force-yes install libsasl2-dev
+apt-get --yes --force-yes install libmhash-dev
+apt-get --yes --force-yes install unixodbc-dev
+apt-get --yes --force-yes install freetds-dev
+apt-get --yes --force-yes install libpspell-dev
+apt-get --yes --force-yes install libsnmp-dev
+apt-get --yes --force-yes install libmcrypt-dev
+apt-get --yes --force-yes install libxpm-dev 
+apt-get --yes --force-yes install libjpeg-dev 
+apt-get --yes --force-yes install libdb4.8-dev
+apt-get --yes --force-yes install libbz2-dev
+apt-get --yes --force-yes install libpng12-dev 
+apt-get --yes --force-yes install libmysqlclient-dev 
+apt-get --yes --force-yes install libapache2-mod-fastcgi 
+apt-get --yes --force-yes install apache2-mpm-worker
+apt-get --yes --force-yes install libcurl4-openssl-dev
+apt-get --yes --force-yes install git 
 a2enmod actions
 service apache2 restart
 
