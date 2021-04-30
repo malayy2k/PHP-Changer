@@ -49,6 +49,7 @@ apt-get --yes --force-yes install libmysqlclient-dev
 apt-get --yes --force-yes install libapache2-mod-fastcgi 
 apt-get --yes --force-yes install apache2-mpm-worker
 apt-get --yes --force-yes install libcurl4-openssl-dev
+apt-get --yes --force-yes install sqlite3 libsqlite3-dev
 apt-get --yes --force-yes install git 
 a2enmod actions
 service apache2 restart
