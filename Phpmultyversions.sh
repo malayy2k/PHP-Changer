@@ -6,9 +6,10 @@ function pause(){
 echo '
 ***********************************************************
 * This Action it will take about 35-50 minutes            *
-* And will be install the PHP 5.6.20 and 7.2.14 versions  *
-* Total your server will have 3 diferent PHP versions the *
-* Curent php version plus 5.6.20,7.0.33,7.1.26 & 7.2.14   *
+* And will be install the PHP 7.0.33 and 8.0.2 versions   *
+* Total your server will have 6 diferent PHP versions the *
+* Curent php version plus 7.0.33, 7.1.26, 7.2.14, 7.3.27, *
+* 7.4.15 & 8.0.2.                                         *
 * << If you agree Please wait until this script Finish    *
 *    or else control/Z now and stop the Execution   >>    *
 *********************************************************** 
@@ -138,16 +139,6 @@ chmod +x /opt/phpfarm/src/compile.sh
 chmod +x /opt/phpfarm/src/pyrus.sh
 
 
-##pause  'Press [Enter] key to Install the PHP 5.6.40 version...'
-echo '
-**********************************************************
-****                                                  ****
-****      STARTING PHP 5.6.40 INSTALLATION            ****
-****                                                  ****
-**********************************************************
-'
-./compile.sh 5.6.40
-
 ##pause  'Press [Enter] key to Install the PHP 7.0.33 version...'
 echo '
 **********************************************************
@@ -237,7 +228,6 @@ echo '<Directory /var/sentora/phpconfig/>
 Require all granted
 </Directory>' >  /var/sentora/phpconfig/cgiPath.conf
 
-echo FastCgiServer /var/sentora/phpconfig/php-cgi-5.6.40 >> /var/sentora/phpconfig/cgiConfig.conf
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.0.33 >> /var/sentora/phpconfig/cgiConfig.conf
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.1.26 > /var/sentora/phpconfig/cgiConfig.conf
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.2.14 > /var/sentora/phpconfig/cgiConfig.conf
@@ -245,18 +235,6 @@ echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.3.27 > /var/sentora/phpconfi
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.4.15 > /var/sentora/phpconfig/cgiConfig.conf
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-8.0.2 > /var/sentora/phpconfig/cgiConfig.conf
 echo ScriptAlias /cgi-bin-php/ /var/sentora/phpconfig/ >> /var/sentora/phpconfig/cgiConfig.conf
-
-echo '#!/bin/sh
-PHPRC="/etc/php5/cgi/5.6.40/"
-export PHPRC
-
-PHP_FCGI_FCGI_CHILDREN=3
-export PHP_FCGI_CHILDREN
-
-PHP_FCGI_MAX_REQESTS=5000
-export PHP_FCGI_MAX_REQUESTS
-
-exec /opt/phpfarm/inst/bin/php-cgi-5.6.40' > /var/sentora/phpconfig/php-cgi-5.6.40
 
 
 echo '#!/bin/sh
