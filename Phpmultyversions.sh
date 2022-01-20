@@ -140,15 +140,15 @@ chmod +x /opt/phpfarm/src/compile.sh
 chmod +x /opt/phpfarm/src/pyrus.sh
 
 
-##pause  'Press [Enter] key to Install the PHP 5.6 version...'
+##pause  'Press [Enter] key to Install the PHP 5.6.40 version...'
 echo '
 **********************************************************
 ****                                                  ****
-****      STARTING PHP 5.6 INSTALLATION            ****
+****      STARTING PHP 5.6.40 INSTALLATION            ****
 ****                                                  ****
 **********************************************************
 '
-./compile.sh 5.6
+./compile.sh 5.6.40
 
 ##pause  'Press [Enter] key to Install the PHP 7.1.26 version...'
 echo '
@@ -229,7 +229,7 @@ echo '<Directory /var/sentora/phpconfig/>
 Require all granted
 </Directory>' >  /var/sentora/phpconfig/cgiPath.conf
 
-echo FastCgiServer /var/sentora/phpconfig/php-cgi-5.6 >> /var/sentora/phpconfig/cgiConfig.conf
+echo FastCgiServer /var/sentora/phpconfig/php-cgi-5.6.40 >> /var/sentora/phpconfig/cgiConfig.conf
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.1.26 > /var/sentora/phpconfig/cgiConfig.conf
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.2.14 > /var/sentora/phpconfig/cgiConfig.conf
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.3.27 > /var/sentora/phpconfig/cgiConfig.conf
@@ -239,7 +239,7 @@ echo ScriptAlias /cgi-bin-php/ /var/sentora/phpconfig/ >> /var/sentora/phpconfig
 
 
 echo '#!/bin/sh
-PHPRC="/etc/php/5.6/cgi/5.6/"
+PHPRC="/etc/php/5.6/cgi/5.6.40/"
 export PHPRC
 
 PHP_FCGI_FCGI_CHILDREN=3
@@ -248,7 +248,7 @@ export PHP_FCGI_CHILDREN
 PHP_FCGI_MAX_REQESTS=5000
 export PHP_FCGI_MAX_REQUESTS
 
-exec /opt/phpfarm/inst/bin/php-cgi-7.0.33' > /var/sentora/phpconfig/php-cgi-7.0.33
+exec /opt/phpfarm/inst/bin/php-cgi-5.6.40' > /var/sentora/phpconfig/php-cgi-5.6.40
 
 echo '#!/bin/sh
 PHPRC="/etc/php/5.6/cgi/7.1.26/"
