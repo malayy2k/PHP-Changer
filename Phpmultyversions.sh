@@ -153,15 +153,15 @@ echo '
 '
 ./compile.sh 5.6.40
 
-##pause  'Press [Enter] key to Install the PHP 7.1.26 version...'
+##pause  'Press [Enter] key to Install the PHP 7.0.33 version...'
 echo '
 **********************************************************
 ****                                                  ****
-****     STARTING PHP 7.0.30 INSTALLATION             ****
+****     STARTING PHP 7.0.33 INSTALLATION             ****
 ****                                                  ****
 **********************************************************
 '
-./compile.sh 7.0.30
+./compile.sh 7.0.33
 
 ##pause  'Press [Enter] key to Install the PHP 7.2.14 version...'
 echo '
@@ -192,6 +192,16 @@ echo '
 **********************************************************
 '
 ./compile.sh 7.3.27
+
+##pause  'Press [Enter] key to Install the PHP 7.4.27 version...'
+echo '
+**********************************************************
+****                                                  ****
+****     STARTING PHP 7.4.27 INSTALLATION             ****
+****                                                  ****
+**********************************************************
+'
+./compile.sh 7.4.27
 
 ##pause  'Press [Enter] key to Install the PHP 8.0.2 version...'
 echo '
@@ -242,7 +252,7 @@ echo ScriptAlias /cgi-bin-php/ /var/sentora/phpconfig/ >> /var/sentora/phpconfig
 
 
 echo '#!/bin/sh
-PHPRC="/etc/php/5.6/cgi/5.6.40/"
+PHPRC="/etc/php/7.0/cgi/5.6.40/"
 export PHPRC
 
 PHP_FCGI_FCGI_CHILDREN=3
@@ -254,7 +264,7 @@ export PHP_FCGI_MAX_REQUESTS
 exec /opt/phpfarm/inst/bin/php-cgi-5.6.40' > /var/sentora/phpconfig/php-cgi-5.6.40
 
 echo '#!/bin/sh
-PHPRC="/etc/php/7.0/cgi/7.0.30/"
+PHPRC="/etc/php/7.0/cgi/7.0.33/"
 export PHPRC
 
 PHP_FCGI_CHILDREN=3
@@ -263,10 +273,10 @@ export PHP_FCGI_CHILDREN
 PHP_FCGI_MAX_REQUESTS=5000
 export PHP_FCGI_MAX_REQUESTS
 
-exec /opt/phpfarm/inst/bin/php-cgi-7.0.30' > /var/sentora/phpconfig/php-cgi-7.0.30
+exec /opt/phpfarm/inst/bin/php-cgi-7.0.33' > /var/sentora/phpconfig/php-cgi-7.0.33
 
 echo '#!/bin/sh
-PHPRC="/etc/php/7.1/cgi/7.1.26/"
+PHPRC="/etc/php/7.0/cgi/7.1.26/"
 export PHPRC
 
 PHP_FCGI_CHILDREN=3
@@ -278,7 +288,7 @@ export PHP_FCGI_MAX_REQUESTS
 exec /opt/phpfarm/inst/bin/php-cgi-7.1.26' > /var/sentora/phpconfig/php-cgi-7.1.26
 
 echo '#!/bin/sh
-PHPRC="/etc/php/7.2/cgi/7.2.14/"
+PHPRC="/etc/php/7.0/cgi/7.2.14/"
 export PHPRC
 
 PHP_FCGI_CHILDREN=3
@@ -290,7 +300,7 @@ export PHP_FCGI_MAX_REQUESTS
 exec /opt/phpfarm/inst/bin/php-cgi-7.2.14' > /var/sentora/phpconfig/php-cgi-7.2.14
 
 echo '#!/bin/sh
-PHPRC="/etc/php/7.3/cgi/7.3.27/"
+PHPRC="/etc/php/7.0/cgi/7.3.27/"
 export PHPRC
 
 PHP_FCGI_CHILDREN=3
@@ -302,7 +312,19 @@ export PHP_FCGI_MAX_REQUESTS
 exec /opt/phpfarm/inst/bin/php-cgi-7.3.27' > /var/sentora/phpconfig/php-cgi-7.3.27
 
 echo '#!/bin/sh
-PHPRC="/etc/php/8.0/cgi/8.0.2/"
+PHPRC="/etc/php/7.0/cgi/7.4.27/"
+export PHPRC
+
+PHP_FCGI_CHILDREN=3
+export PHP_FCGI_CHILDREN
+
+PHP_FCGI_MAX_REQUESTS=5000
+export PHP_FCGI_MAX_REQUESTS
+
+exec /opt/phpfarm/inst/bin/php-cgi-7.4.27' > /var/sentora/phpconfig/php-cgi-7.4.27
+
+echo '#!/bin/sh
+PHPRC="/etc/php/7.0/cgi/8.0.2/"
 export PHPRC
 
 PHP_FCGI_CHILDREN=3
