@@ -52,7 +52,7 @@ apt-get --yes --force-yes install libcurl4-openssl-dev
 apt-get --yes --force-yes install sqlite3 libsqlite3-dev
 apt-get --yes --force-yes install libonig-dev
 apt-get --yes --force-yes install ruby
-gem     --yes --force-yes install oniguruma
+apt-get --yes --force-yes install oniguruma
 apt-get --yes --force-yes install git 
 a2enmod actions
 service apache2 restart
