@@ -57,12 +57,6 @@ apt-get --yes --allow instead install git
 a2enmod actions
 service apache2 restart
 
-wget https://nih.at/libzip/libzip-1.2.0.tar.gz
-tar -zxvf libzip-1.2.0.tar.gz
-cd libzip-1.2.0
-./configure
-make && make install
-
 ##pause  'Press [Enter] key to Set up the PHP Farm...'
 echo '
 **********************************************************
@@ -235,6 +229,7 @@ echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.0.30 > /var/sentora/phpconfi
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.1.26 > /var/sentora/phpconfig/cgiConfig.conf
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.2.14 > /var/sentora/phpconfig/cgiConfig.conf
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.3.27 > /var/sentora/phpconfig/cgiConfig.conf
+echo FastCgiServer /var/sentora/phpconfig/php-cgi-7.4.27 > /var/sentora/phpconfig/cgiConfig.conf
 echo FastCgiServer /var/sentora/phpconfig/php-cgi-8.0.2 > /var/sentora/phpconfig/cgiConfig.conf
 echo ScriptAlias /cgi-bin-php/ /var/sentora/phpconfig/ >> /var/sentora/phpconfig/cgiConfig.conf
 
