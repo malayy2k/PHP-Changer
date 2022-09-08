@@ -57,12 +57,6 @@ apt-get --yes --force-yes install git
 a2enmod actions
 service apache2 restart
 
-wget https://nih.at/libzip/libzip-1.2.0.tar.gz
-tar -zxvf libzip-1.2.0.tar.gz
-cd libzip-1.2.0
-./configure
-make && make install
-
 ##pause  'Press [Enter] key to Set up the PHP Farm...'
 echo '
 **********************************************************
